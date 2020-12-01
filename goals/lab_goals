@@ -1,0 +1,86 @@
+Course
+  instance methods
+    #title
+      has a setter and a getter method for title (FAILED - 1)
+    #schedule
+      has a setter and a getter method for a course's schedule (FAILED - 2)
+    #description
+      has a setter and a getter method for a course's description (FAILED - 3)
+  class methods
+    .all
+      returns an array of all the instances of the Course class (FAILED - 4)
+
+Scraper
+  #get_page
+    uses Nokogiri to get the HTML from a web page (FAILED - 5)
+  #get_courses
+    uses a CSS selector to return an array of Nokogiri XML elements representing the courses described on the web page we are scraping (FAILED - 6)
+  #make_courses
+    iterates over the courses array returned by #get_courses and creates a new Course instance out of each array element. (FAILED - 7)
+
+Failures:
+
+  1) Course instance methods #title has a setter and a getter method for title
+     Failure/Error: let(:course) {Course.new}
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/course_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/course_spec.rb:11:in `block (4 levels) in <top (required)>'
+
+  2) Course instance methods #schedule has a setter and a getter method for a course's schedule
+     Failure/Error: let(:course) {Course.new}
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/course_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/course_spec.rb:18:in `block (4 levels) in <top (required)>'
+
+  3) Course instance methods #description has a setter and a getter method for a course's description
+     Failure/Error: let(:course) {Course.new}
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/course_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/course_spec.rb:25:in `block (4 levels) in <top (required)>'
+
+  4) Course class methods .all returns an array of all the instances of the Course class
+     Failure/Error: Course.reset_all
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/course_spec.rb:35:in `block (4 levels) in <top (required)>'
+
+  5) Scraper #get_page uses Nokogiri to get the HTML from a web page
+     Failure/Error: Course.reset_all
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/scraper_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+  6) Scraper #get_courses uses a CSS selector to return an array of Nokogiri XML elements representing the courses described on the web page we are scraping
+     Failure/Error: Course.reset_all
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/scraper_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+  7) Scraper #make_courses iterates over the courses array returned by #get_courses and creates a new Course instance out of each array element.
+     Failure/Error: Course.reset_all
+
+     NameError:
+       uninitialized constant Course
+     # ./spec/scraper_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00287 seconds (files took 0.43561 seconds to load)
+7 examples, 7 failures
+
+Failed examples:
+
+rspec ./spec/course_spec.rb:10 # Course instance methods #title has a setter and a getter method for title
+rspec ./spec/course_spec.rb:17 # Course instance methods #schedule has a setter and a getter method for a course's schedule
+rspec ./spec/course_spec.rb:24 # Course instance methods #description has a setter and a getter method for a course's description
+rspec ./spec/course_spec.rb:34 # Course class methods .all returns an array of all the instances of the Course class
+rspec ./spec/scraper_spec.rb:9 # Scraper #get_page uses Nokogiri to get the HTML from a web page
+rspec ./spec/scraper_spec.rb:21 # Scraper #get_courses uses a CSS selector to return an array of Nokogiri XML elements representing the courses described on the web page we are scraping
+rspec ./spec/scraper_spec.rb:33 # Scraper #make_courses iterates over the courses array returned by #get_courses and creates a new Course instance out of each array element.
